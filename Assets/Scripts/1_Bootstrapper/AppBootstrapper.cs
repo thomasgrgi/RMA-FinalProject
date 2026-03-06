@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using PortalEscape.Data;
 using PortalEscape.Services;
 using PortalEscape.Views;
@@ -100,7 +101,7 @@ namespace PortalEscape.Bootstrapper
         private void Update()
         {
             // Simule un déplacement demandé par le joueur en appuyant sur Espace
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 Vector3 randomPos = new Vector3(Random.Range(-2f, 2f), 1f, Random.Range(-2f, 2f));
                 

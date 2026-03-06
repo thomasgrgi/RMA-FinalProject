@@ -71,6 +71,47 @@
         ]
       },
       {
+        "name": "Audio",
+        "dependencies": [
+          {
+            "name": "AudioBehaviour",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "AudioClip",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioManager",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "AudioResource",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "AudioSource",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "SampleClip",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "Core",
         "dependencies": [
           {
@@ -378,6 +419,12 @@
             "icon": null
           },
           {
+            "name": "SkinnedMeshRenderer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Skybox",
             "scenes": [],
             "dependencyType": 0,
@@ -480,6 +527,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.assetbundle"
+          },
+          {
+            "name": "Required by Audio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.audio"
           },
           {
             "name": "Required by CrashReporting Module",
@@ -921,6 +974,12 @@
             "icon": null
           },
           {
+            "name": "CapsuleCollider",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "CharacterController",
             "scenes": [],
             "dependencyType": 0,
@@ -960,6 +1019,12 @@
           },
           {
             "name": "Rigidbody",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "SphereCollider",
             "scenes": [],
             "dependencyType": 0,
             "icon": null
@@ -1090,6 +1155,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.assetbundle"
+          },
+          {
+            "name": "Required by Audio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.audio"
           },
           {
             "name": "Required by Core Module",
