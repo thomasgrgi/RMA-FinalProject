@@ -16,6 +16,10 @@ namespace PortalEscape.Bootstrapper
         [Header("Configuration")]
         [SerializeField] private PortalEscapeConfig config;
 
+        [Header("Caméras / Rigs")]
+        [SerializeField] private GameObject vrRigPrefab;
+        [SerializeField] private GameObject arRigPrefab;
+
         [Header("Vues à injecter")]
         [SerializeField] private DebugOverlayView debugOverlayView;
         [SerializeField] private SharedCubeView sharedCubeView;
@@ -42,6 +46,8 @@ namespace PortalEscape.Bootstrapper
                 debugOverlayView.gameObject.SetActive(false);
             }
 
+            SpawnPlayerRig();
+
             // 3. Initialisation des Services Unity (Network)
             networkSyncService.Init(_loggerService);
 
@@ -49,6 +55,20 @@ namespace PortalEscape.Bootstrapper
             sharedCubeView.Init(networkSyncService);
 
             _loggerService.LogInfo("Bootstrapper a terminé l'injection des dépendances.");
+        }
+
+        private void SpawnPlayerRig()
+        {
+            if (config.currentRole == AppRole.VR_Host)
+            {
+                Instantiate(vrRigPrefab);
+                _loggerService.LogInfo("VR Rig instancié.");
+            }
+            else if (config.currentRole == AppRole.AR_Client)
+            {
+                Instantiate(arRigPrefab);
+                _loggerService.LogInfo("AR Rig instancié.");
+            }
         }
 
         private void Start()

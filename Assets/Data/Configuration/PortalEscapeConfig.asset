@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fc7d450be27ad44b4a53d6b930d58d, type: 3}
   m_Name: PortalEscapeConfig
   m_EditorClassIdentifier: Assembly-CSharp::PortalEscape.Data.PortalEscapeConfig
-  currentRole: 0
+  currentRole: 1
   serverIP: 192.168.137.1
   showDebugOverlay: 1
   defaultWallMoveSpeed: 2
