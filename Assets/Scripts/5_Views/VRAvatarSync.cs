@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class VRAvatarSync : NetworkBehaviour
 {
-    [Header("Éléments traqués par la VR (Sources)")]
-    public Transform vrHead;
-    public Transform vrLeftHand;
-    public Transform vrRightHand;
+    
 
     [Header("Éléments visuels (Avatars)")]
     public Transform visualHead;
     public Transform visualLeftHand;
     public Transform visualRightHand;
+
+    //[Header("Éléments traqués par la VR (Sources)")]
+    private Transform vrHead;
+    private Transform vrLeftHand;
+    private Transform vrRightHand;
 
     // Variables réseau (Seul le joueur VR - Owner - a le droit d'écrire dedans)
     private NetworkVariable<Vector3> headPos = new NetworkVariable<Vector3>(writePerm: NetworkVariableWritePermission.Owner);
@@ -36,13 +38,20 @@ public class VRAvatarSync : NetworkBehaviour
     {
         base.OnNetworkSpawn();
 
-        // Si on N'EST PAS le propriétaire (donc on est le PC qui regarde l'avatar VR)
+        // Si on N'EST PAS le propriétaire
         if (!IsOwner)
         {
             // On réactive les cubes visuels pour pouvoir voir le joueur VR !
             if (visualHead != null) visualHead.gameObject.SetActive(true);
             if (visualLeftHand != null) visualLeftHand.gameObject.SetActive(true);
             if (visualRightHand != null) visualRightHand.gameObject.SetActive(true);
+        }
+        else
+        {
+            // On cherche les composants à suivre
+            vrHead = GameObject.FindWithTag("VRHead").transform;
+            vrLeftHand = GameObject.FindWithTag("VRLeftHand").transform;
+            vrRightHand = GameObject.FindWithTag("VRRightHand").transform;
         }
     }
 
