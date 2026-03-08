@@ -376,7 +376,7 @@ MonoBehaviour:
       - {fileID: 11400000, guid: c6a1b933bd6e70646ae1a12681769be3, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
-    ConnectionApproval: 0
+    ConnectionApproval: 1
     ConnectionData: 
     EnableTimeResync: 0
     TimeResyncInterval: 30
@@ -2035,6 +2035,8 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 3c45380a217da874aba779712f99a269, type: 2}
   vrRigPrefab: {fileID: 5438887257414094860, guid: f5c4c023dc6291542a20e54b5db3b9a9, type: 3}
   arRigPrefab: {fileID: 7786427293374713789, guid: c8da93dba9e46ef4ab3d6f1476c44afa, type: 3}
+  vrNetworkAvatarPrefab: {fileID: 5790935984238700476, guid: 278657afa8003494bb6f0d47bd1bf353, type: 3}
+  arNetworkAvatarPrefab: {fileID: 7897381392442781574, guid: b56960147fa411e4b999e9fec19fcedc, type: 3}
   debugOverlayView: {fileID: 1240701478}
   sharedCubeView: {fileID: 1459636542}
   networkManager: {fileID: 130926802}

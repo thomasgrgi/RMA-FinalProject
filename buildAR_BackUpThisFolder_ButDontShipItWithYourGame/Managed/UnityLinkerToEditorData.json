@@ -34,14 +34,26 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           },
@@ -49,6 +61,12 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -75,13 +93,23 @@
         "dependencies": [
           {
             "name": "AudioBehaviour",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioClip",
             "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioListener",
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -116,10 +144,8 @@
         "dependencies": [
           {
             "name": "Behaviour",
-            "scenes": [
-              "Assets/Scenes/MainScene.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -130,7 +156,9 @@
           },
           {
             "name": "Camera",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -256,7 +284,9 @@
           },
           {
             "name": "LineRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -420,7 +450,9 @@
           },
           {
             "name": "SkinnedMeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -432,7 +464,9 @@
           },
           {
             "name": "SortingGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -975,13 +1009,17 @@
           },
           {
             "name": "CapsuleCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "CharacterController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
