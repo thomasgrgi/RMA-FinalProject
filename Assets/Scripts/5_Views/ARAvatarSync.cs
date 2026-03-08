@@ -8,12 +8,13 @@ namespace PortalEscape.Services
     /// </summary>
     public class ARAvatarSync : NetworkBehaviour
     {
-        [Header("Élément traqué par l'AR (Source locale)")]
-        [Tooltip("Si vide, le script utilisera automatiquement Camera.main au démarrage.")]
-        public Transform arCamera;
 
         [Header("Élément visuel (Ce que voit le joueur VR)")]
         public Transform visualDevice;
+
+        // [Header("Élément traqué par l'AR (Source locale)")]
+        // [Tooltip("Si vide, le script utilisera automatiquement Camera.main au démarrage.")]
+        private Transform arCamera;
 
         // Variables réseau (Seul le téléphone - Owner - écrit dedans)
         private NetworkVariable<Vector3> devicePos = new NetworkVariable<Vector3>(writePerm: NetworkVariableWritePermission.Owner);
@@ -33,7 +34,7 @@ namespace PortalEscape.Services
                 // Si on est le téléphone, on cherche automatiquement la caméra AR locale si elle n'est pas assignée
                 if (arCamera == null && Camera.main != null)
                 {
-                    arCamera = Camera.main.transform;
+                    arCamera = GameObject.FindWithTag("ARCamera").transform;
                 }
             }
             else
