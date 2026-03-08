@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.Netcode;
+using System.Collections.Generic; // Ajouté pour la détection XR
 using ARVRMultiplayer.Models;
 using ARVRMultiplayer.Services;
 using ARVRMultiplayer.Views;
@@ -64,7 +65,29 @@ namespace ARVRMultiplayer.Core
             _localRigService = new LocalRigService();
 
             bool isMobile = Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer;
-            bool useAR = isMobile || _forceARMode;
+            
+            // --- CORRECTION DE LA DÉTECTION ---
+            // Les casques Oculus/Meta Quest tournent sous Android !
+            // On doit vérifier si un casque VR est actif (via le sous-système d'affichage) ou via le nom de l'appareil.
+            bool isVRHeadset = false;
+            
+            // 1. Vérification par le nom de l'appareil (très fiable pour les Quest)
+            string deviceModel = SystemInfo.deviceModel.ToLower();
+            if (deviceModel.Contains("oculus") || deviceModel.Contains("quest") || deviceModel.Contains("meta"))
+            {
+                isVRHeadset = true;
+            }
+            
+            // 2. Vérification par le système XR natif (sécurité supplémentaire)
+            var xrDisplays = new List<UnityEngine.XR.XRDisplaySubsystem>();
+            SubsystemManager.GetSubsystems(xrDisplays);
+            if (xrDisplays.Count > 0 && xrDisplays[0].running)
+            {
+                isVRHeadset = true;
+            }
+
+            // C'est de l'AR uniquement si on est sur mobile ET qu'on n'a pas de casque VR sur la tête.
+            bool useAR = (isMobile && !isVRHeadset) || _forceARMode;
 
             if (useAR)
             {
