@@ -1,181 +1,136 @@
-using System;
-using System.Threading.Tasks;
-using Unity.Netcode;
-using Unity.Services.Authentication;
-using Unity.Services.Core;
-using Unity.Services.Multiplayer;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using PortalEscape.Data;
-using PortalEscape.Services;
-using PortalEscape.Views;
+using Unity.Netcode;
+using ARVRMultiplayer.Models;
+using ARVRMultiplayer.Services;
+using ARVRMultiplayer.Views;
+using ARVRMultiplayer.Controllers;
 
-namespace PortalEscape.Bootstrapper
+namespace ARVRMultiplayer.Core
 {
     public class AppBootstrapper : MonoBehaviour
     {
-        [Header("Configuration")]
-        [SerializeField] private PortalEscapeConfig config;
+        [Header("Dépendances Unity externes")]
+        [SerializeField] private NetworkManager _networkManager;
 
-        [Header("Caméras / Rigs (Local)")]
-        [Tooltip("Ce qui gère les capteurs physiques (Non-Réseau)")]
-        [SerializeField] private GameObject vrRigPrefab;
-        [SerializeField] private GameObject arRigPrefab;
+        [Header("UI Globale")]
+        [Tooltip("Le Canvas qui contient la vue de connexion et les logs")]
+        [SerializeField] private Canvas _mainUICanvas; 
+        [SerializeField] private GameObject _uiMenuContainer; // Le conteneur à afficher/masquer
+        [SerializeField] private ConnectionUIView _connectionView;
+        [SerializeField] private DebugLogView _debugLogView;
 
-        [Header("Avatars (Réseau)")]
-        [Tooltip("Ce que les autres joueurs voient (NetworkObjects)")]
-        [SerializeField] private GameObject vrNetworkAvatarPrefab;
-        [SerializeField] private GameObject arNetworkAvatarPrefab;
+        [Header("UI Spécifique AR")]
+        [SerializeField] private ARHUDView _arHudView;
 
-        [Header("Vues à injecter")]
-        [SerializeField] private DebugOverlayView debugOverlayView;
-        [SerializeField] private SharedCubeView sharedCubeView;
+        [Header("Rigs Locaux")]
+        [SerializeField] private bool _forceARMode = false;
         
-        [Header("Composants Réseau")]
-        [SerializeField] private NetworkManager networkManager;
-        [SerializeField] private NetworkSyncService networkSyncService;
+        [SerializeField] private GameObject _vrRigRoot;
+        [SerializeField] private Transform _vrHead;
+        [SerializeField] private Transform _vrLeftHand;
+        [SerializeField] private Transform _vrRightHand;
+        
+        [Space]
+        [SerializeField] private GameObject _arRigRoot;
+        [SerializeField] private Transform _arCamera;
 
-        // Services
-        private LoggerService _loggerService;
-        private ISession _session;
+        // Contrôleurs et Services
+        private NetworkConnectionService _connectionService;
+        private ConnectionController _connectionController;
+        private LocalRigService _localRigService;
+        private ARHUDController _arHudController;
 
-        private void Awake()
+        private async void Start()
         {
-            _loggerService = new LoggerService();
+            Application.logMessageReceived += HandleSystemLog;
+            
+            // 1. Initialiser le service de Rig Local (et basculer l'UI)
+            SetupLocalRigAndUI();
 
-            if (config.showDebugOverlay && debugOverlayView != null)
-            {
-                debugOverlayView.Init(_loggerService);
-            }
-            else if (debugOverlayView != null)
-            {
-                debugOverlayView.gameObject.SetActive(false);
-            }
+            // 2. Créer le Modèle et le Service réseau
+            var networkModel = new NetworkStateModel();
+            _connectionService = new NetworkConnectionService(_networkManager);
+            await _connectionService.InitializeAsync();
 
-            // 1. Fait apparaître NOTRE caméra physique (0 impact réseau)
-            SpawnLocalRig();
-
-            networkSyncService.Init(_loggerService);
-            if (sharedCubeView != null) sharedCubeView.Init(networkSyncService);
-
-            _loggerService.LogInfo("Bootstrapper initialisé.");
+            // 3. Créer le Contrôleur
+            _connectionController = new ConnectionController(networkModel, _connectionService, _connectionView, maxPlayers: 10);
+            
+            // 4. S'abonner au spawn
+            AvatarSyncController.OnLocalAvatarSpawned += HandleLocalAvatarSpawned;
         }
 
-        private void SpawnLocalRig()
+        private void SetupLocalRigAndUI()
         {
-            if (config.currentRole == AppRole.VR_Host && vrRigPrefab != null)
+            _localRigService = new LocalRigService();
+
+            bool isMobile = Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer;
+            bool useAR = isMobile || _forceARMode;
+
+            if (useAR)
             {
-                Instantiate(vrRigPrefab);
-                _loggerService.LogInfo("VR Rig Local instancié.");
+                Debug.Log("AppBootstrapper: Mode AR détecté.");
+                _vrRigRoot.SetActive(false);
+                _arRigRoot.SetActive(true);
+                
+                // Enregistrement avec le ROOT
+                _localRigService.RegisterARRig(_arRigRoot.transform, _arCamera);
+
+                // --- MAGIE ARCHITECTURALE ---
+                // On passe le Canvas de VR (WorldSpace) à AR (ScreenSpaceOverlay) dynamiquement
+                if (_mainUICanvas != null)
+                {
+                    _mainUICanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                }
+
+                // On active le HUD AR et on crée son contrôleur
+                if (_arHudView != null)
+                {
+                    _arHudView.gameObject.SetActive(true);
+                    _arHudController = new ARHUDController(_localRigService, _arHudView, _uiMenuContainer, resetHeight: 1.5f);
+                }
             }
-            else if (config.currentRole == AppRole.AR_Client && arRigPrefab != null)
+            else
             {
-                Instantiate(arRigPrefab);
-                _loggerService.LogInfo("AR Rig Local instancié.");
+                Debug.Log("AppBootstrapper: Mode VR détecté.");
+                _arRigRoot.SetActive(false);
+                _vrRigRoot.SetActive(true);
+                
+                // Enregistrement avec le ROOT
+                _localRigService.RegisterVRRig(_vrRigRoot.transform, _vrHead, _vrLeftHand, _vrRightHand);
+
+                // On s'assure que le Canvas est bien en mode VR
+                if (_mainUICanvas != null)
+                {
+                    _mainUICanvas.renderMode = RenderMode.WorldSpace;
+                }
+
+                // On désactive le HUD AR car on est en VR
+                if (_arHudView != null)
+                {
+                    _arHudView.gameObject.SetActive(false);
+                }
             }
         }
 
-        private void Start()
+        private void HandleLocalAvatarSpawned(AvatarSyncController localAvatarController)
         {
-            // On lance la séquence asynchrone complète
-            _ = InitAndConnectToSharedWorldAsync();
+            localAvatarController.Init(_localRigService);
+        }
+
+        private void HandleSystemLog(string logString, string stackTrace, LogType type)
+        {
+            if (_debugLogView != null) _debugLogView.AddLog(logString, type);
         }
 
         private void OnDestroy()
         {
-            if (networkManager != null)
-                networkManager.ConnectionApprovalCallback -= ApprovalCheck;
-                
-            _session?.LeaveAsync();
-        }
-
-        private async Task InitAndConnectToSharedWorldAsync()
-        {
-            try
-            {
-                _loggerService.LogInfo("Initialisation d'Unity Services...");
-                // On s'assure que UGS est prêt AVANT de faire quoi que ce soit d'autre
-                await UnityServices.InitializeAsync();
-                
-                string profileName = config.currentRole == AppRole.VR_Host ? "HostVR" : "ClientAR";
-                AuthenticationService.Instance.SwitchProfile(profileName);
-                await AuthenticationService.Instance.SignInAnonymouslyAsync();
-                _loggerService.LogInfo($"Authentifié en tant que : {profileName}");
-
-                // On attache notre "rôle" (VR ou AR) à nos données de connexion
-                networkManager.NetworkConfig.ConnectionData = BitConverter.GetBytes((int)config.currentRole);
-
-                // Si on est le Host VR, on active le callback d'approbation pour gérer les spawns
-                if (config.currentRole == AppRole.VR_Host)
-                {
-                    networkManager.ConnectionApprovalCallback = ApprovalCheck;
-                }
-
-                // Configuration du Lobby de l'Escape Game
-                var options = new SessionOptions() {
-                    Name = "PortalEscapeRoom",
-                    MaxPlayers = 4
-                }.WithDistributedAuthorityNetwork();
-
-                _loggerService.LogInfo("Connexion au monde partagé...");
-                
-                // Unity va automatiquement faire un StartHost ou StartClient selon s'il est le premier
-                _session = await MultiplayerService.Instance.CreateOrJoinSessionAsync("PortalEscapeRoom", options);
-                
-                _loggerService.LogInfo("Session rejointe avec succès !");
-            }
-            catch (Exception e)
-            {
-                _loggerService.LogError($"Échec réseau: {e.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Appelée UNIQUEMENT PAR LE SERVEUR quand un joueur (y compris lui-même) tente de rejoindre.
-        /// </summary>
-        private void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request, NetworkManager.ConnectionApprovalResponse response)
-        {
-            // On accepte la connexion
-            response.Approved = true;
-            // On bloque le spawn automatique de base de Netcode (car le Host doit choisir le bon prefab)
-            response.CreatePlayerObject = false;
-
-            // Décodage du rôle envoyé par le joueur
-            AppRole incomingRole = AppRole.VR_Host;
-            if (request.Payload != null && request.Payload.Length == 4)
-            {
-                incomingRole = (AppRole)BitConverter.ToInt32(request.Payload, 0);
-            }
-
-            // Instanciation asymétrique du bon modèle !
-            GameObject prefabToSpawn = incomingRole == AppRole.VR_Host ? vrNetworkAvatarPrefab : arNetworkAvatarPrefab;
+            Application.logMessageReceived -= HandleSystemLog;
+            AvatarSyncController.OnLocalAvatarSpawned -= HandleLocalAvatarSpawned;
             
-            if (prefabToSpawn != null)
-            {
-                GameObject avatarInstance = Instantiate(prefabToSpawn);
-                var netObj = avatarInstance.GetComponent<NetworkObject>();
-                
-                // Spawn l'objet sur le réseau et l'assigne spécifiquement à l'ID de connexion
-                netObj.SpawnAsPlayerObject(request.ClientNetworkId);
-                _loggerService.LogInfo($"Serveur : Avatar {incomingRole} instancié pour le client {request.ClientNetworkId}");
-            }
-            else
-            {
-                _loggerService.LogError($"Erreur : Prefab manquant pour le rôle {incomingRole}");
-            }
-        }
-        
-        private void Update()
-        {
-            // Test du mouvement partagé
-            if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
-            {
-                Vector3 randomPos = new Vector3(UnityEngine.Random.Range(-2f, 2f), 1f, UnityEngine.Random.Range(-2f, 2f));
-                if (config.currentRole == AppRole.VR_Host && networkSyncService != null)
-                {
-                    networkSyncService.MoveCubeDirectly(randomPos);
-                }
-            }
+            _arHudController?.Cleanup();
+            _connectionController?.Cleanup();
+            _connectionService?.Cleanup();
+            _connectionService?.Disconnect();
         }
     }
 }
