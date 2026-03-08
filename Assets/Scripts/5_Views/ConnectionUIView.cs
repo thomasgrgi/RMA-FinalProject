@@ -1,45 +1,69 @@
 using System;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using ARVRMultiplayer.Models;
 
-namespace PortalEscape.Views
+namespace ARVRMultiplayer.Views
 {
     /// <summary>
-    /// Vue responsable d'afficher le bouton de connexion (remplace l'ancien OnGUI).
-    /// Respecte la séparation : elle ne fait que déclencher un événement, sans aucune logique réseau.
+    /// Gère uniquement l'affichage et la capture des entrées utilisateur.
+    /// Ne contient aucune logique réseau.
     /// </summary>
     public class ConnectionUIView : MonoBehaviour
     {
-        public event Action OnConnectRequested;
-        
-        private bool _isConnected = false;
-        private bool _isServicesReady = false;
+        [Header("Éléments d'interface")]
+        [SerializeField] private Button _connectButton;
+        [SerializeField] private TextMeshProUGUI _statusText;
+        [SerializeField] private TMP_InputField _profileNameInput;
+        [SerializeField] private TMP_InputField _sessionNameInput;
 
-        public void SetServicesReady() => _isServicesReady = true;
-        public void SetConnected() => _isConnected = true;
+        // Action déclenchée quand l'utilisateur clique (transmise au Controller)
+        public event Action<string, string> OnConnectButtonClicked;
 
-        // Peut être appelé depuis un script externe (ex: un bouton VR interactif)
-        public void TriggerConnection()
+        private void Awake()
         {
-            if (!_isConnected && _isServicesReady)
-            {
-                OnConnectRequested?.Invoke();
-            }
+            _connectButton.onClick.AddListener(HandleConnectClick);
         }
 
-        private void OnGUI()
+        private void OnDestroy()
         {
-            // On masque le bouton si on est déjà connecté ou si les services ne sont pas prêts
-            if (_isConnected || !_isServicesReady) return;
+            _connectButton.onClick.RemoveListener(HandleConnectClick);
+        }
 
-            GUI.skin.button.fontSize = 40;
-            int width = 600;
-            int height = 150;
-            int x = (Screen.width - width) / 2;
-            int y = Screen.height - height - 100;
+        private void HandleConnectClick()
+        {
+            string profile = string.IsNullOrEmpty(_profileNameInput.text) ? "DefaultPlayer" : _profileNameInput.text;
+            string session = string.IsNullOrEmpty(_sessionNameInput.text) ? "SharedSession" : _sessionNameInput.text;
+            
+            OnConnectButtonClicked?.Invoke(profile, session);
+        }
 
-            if (GUI.Button(new Rect(x, y, width, height), "REJOINDRE LA PARTIE"))
+        // Appelée par le contrôleur pour mettre à jour l'affichage
+        public void UpdateView(NetworkStateModel.ConnectionStatus status, string errorMsg)
+        {
+            switch (status)
             {
-                TriggerConnection();
+                case NetworkStateModel.ConnectionStatus.Disconnected:
+                    _statusText.text = "Prêt à se connecter";
+                    _statusText.color = Color.white;
+                    _connectButton.interactable = true;
+                    break;
+                case NetworkStateModel.ConnectionStatus.Connecting:
+                    _statusText.text = "Connexion en cours...";
+                    _statusText.color = Color.yellow;
+                    _connectButton.interactable = false;
+                    break;
+                case NetworkStateModel.ConnectionStatus.Connected:
+                    _statusText.text = "Connecté !";
+                    _statusText.color = Color.green;
+                    _connectButton.interactable = false;
+                    break;
+                case NetworkStateModel.ConnectionStatus.Error:
+                    _statusText.text = $"Erreur: {errorMsg}";
+                    _statusText.color = Color.red;
+                    _connectButton.interactable = true;
+                    break;
             }
         }
     }
