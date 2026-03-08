@@ -7,6 +7,58 @@
 
 
 
+extern void NetworkedXRGrabInteractable_Awake_m9D388C829479E673D36F322F6F1BD1BC6B425730 (void);
+extern void NetworkedXRGrabInteractable_OnEnable_mFFA846DEEC24F7B466D29E87401B99E0F8DDC61B (void);
+extern void NetworkedXRGrabInteractable_OnDisable_m82C5B99BE453B3BFEFD620D38B3CFC642A67E64B (void);
+extern void NetworkedXRGrabInteractable_OnHoverEnteredLocal_m94089EDC79FB0359D1CF4E90B743F8E38C1056CB (void);
+extern void NetworkedXRGrabInteractable_OnHoverExitedLocal_m956AA424EF89B15C23CF34AC0B0055694337B667 (void);
+extern void NetworkedXRGrabInteractable_OnSelectEnteredLocal_m6D60F8F367CCEAB5C435F29769BC2F243494E4B6 (void);
+extern void NetworkedXRGrabInteractable_OnSelectExitedLocal_mE30CB9445FE7FA9B960FBC5D135AF359FFE1861F (void);
+extern void NetworkedXRGrabInteractable_LocalCatch_m8337A74876616D5B4AC99667B97832E780AE8FDD (void);
+extern void NetworkedXRGrabInteractable_WaitForOwnershipAndCatch_m2C3D67F11EE6F15D6B4B00CE591A09D9C16699CF (void);
+extern void NetworkedXRGrabInteractable_CatchLocal_m72BD2673085AC8AFD207D2E67EAEA71F4C2499B7 (void);
+extern void NetworkedXRGrabInteractable_LocalRelease_m1953AA42B0C3CCC9059DEB12F05EC3CFA11B5204 (void);
+extern void NetworkedXRGrabInteractable_ReleaseLocal_mC4FC55FEBBB7F86F97A713C892F178ADBC2C90A2 (void);
+extern void NetworkedXRGrabInteractable_LocalShowCatchable_mA574A5353E61C479C3DC9DACE8EED968A2733A7E (void);
+extern void NetworkedXRGrabInteractable_LocalHideCatchable_mA80624D4E2E945EDE570A5202D93144538AE572C (void);
+extern void NetworkedXRGrabInteractable_ApplyShowCaughtVisual_mFE3B087644BEF2B6104E439D8C6972F3BFC4CF38 (void);
+extern void NetworkedXRGrabInteractable_ApplyShowReleasedVisual_m6C858E37DE0016385B43BF05E70E11B949131F7B (void);
+extern void NetworkedXRGrabInteractable_ApplyShowCatchableVisual_mA6923FB2A3CCF5151AEE85C0F5C0785F8F0CDD70 (void);
+extern void NetworkedXRGrabInteractable_ApplyHideCatchableVisual_mDBE0861D3FE2A0BD6A33C014C0DCF1874584B438 (void);
+extern void NetworkedXRGrabInteractable__ctor_m70B29D6FA8FF48D500218307E2D1C2DD4EFA1DEF (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16__ctor_m5F3961E23908F4F13F6B3FE0C08F3559D71CDC2F (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16_System_IDisposable_Dispose_m46F69928C05F4941CCD357E75ADB66AA5286EC1C (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16_MoveNext_m0245DD4C46785B65FC5D29C85051BA7C3A1CCF6A (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m95BF8349DF75059F0620D2CAB3B8EBCB15D44B62 (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_IEnumerator_Reset_mB511FEC3240CB59C51CF81DBD44979A105E037BB (void);
+extern void U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_IEnumerator_get_Current_m33A2E7C712849924B03C9823A9EE9C33F59FBCE4 (void);
+extern void NetworkedGrabRpcHandler_NotifyShowCaught_m2F5B68D15D10526DB699D42E7680F88C2A6CF754 (void);
+extern void NetworkedGrabRpcHandler_NotifyShowReleased_mAB79840C190E065E01603E2BBDFFADA48BEC832C (void);
+extern void NetworkedGrabRpcHandler_NotifyShowCatchable_m22E13C6839D37FFE8C535616F7700D273F36EFFB (void);
+extern void NetworkedGrabRpcHandler_NotifyHideCatchable_mAE1629DA3ADB3AFDC432C1F50DDD36EA92775A7E (void);
+extern void NetworkedGrabRpcHandler_RequestOwnership_m4148B89C6A78876C83D48E5557E26AB5B306C091 (void);
+extern void NetworkedGrabRpcHandler_RequestOwnershipRpc_m59DCE4B655448DE398C7AB2AFE5A82855559CFFD (void);
+extern void NetworkedGrabRpcHandler_RequestShowCaughtRpc_mF64047623E6A90527EE37DCE65EAB3F570636C2D (void);
+extern void NetworkedGrabRpcHandler_RequestShowReleasedRpc_mDD19F4C4BB33F2DB85E39F95847EC311DA7C0898 (void);
+extern void NetworkedGrabRpcHandler_RequestShowCatchableRpc_mC3E328D1FD71F84198D20FB8458E5A965757F756 (void);
+extern void NetworkedGrabRpcHandler_RequestHideCatchableRpc_m1658D8C1340876FAE154E9C4C1D377565C8BFB2D (void);
+extern void NetworkedGrabRpcHandler_ShowCaughtRpc_m242E6DD90E70865D32463C293C60E8AB75B6E811 (void);
+extern void NetworkedGrabRpcHandler_ShowReleasedRpc_m92FB0807A94CF2C8F2A2674DE678C8D4CFD0C8D6 (void);
+extern void NetworkedGrabRpcHandler_ShowCatchableRpc_mD73F355903749A2458FAED6CA4492581F324F529 (void);
+extern void NetworkedGrabRpcHandler_HideCatchableRpc_m15742B9A3FCE9280B9C2526ADB03C9EA8C66ADCB (void);
+extern void NetworkedGrabRpcHandler__ctor_m01FB9BBEF768160AE6532D926F8969BF684E9829 (void);
+extern void NetworkedGrabRpcHandler___initializeVariables_m9441FFA811402605AF9A546C1E88DB4F47350FC1 (void);
+extern void NetworkedGrabRpcHandler___initializeRpcs_m7A151AAF20238508442B56F09417C04E66F67458 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_2839998672_m5E3C859C41B853CF8CE32C2F79E4B9BBD40C3D31 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_2907142082_m3E1BD04FE93E8F9B42AEC28431D04D9BDC34B4B7 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_4178684014_mDB99452EFC13E17CE417235F24D76BC1BC0ABEA0 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_3661222921_m7327F1D0478F74464CF09F7A6C855D1936C7347B (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_1485751161_m6A12E0116A2257CC69A8B20EC4B6B94B1E13E071 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_1408903826_m6C92B73F97B5080168D9E755C25780C35062B0B9 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_204194976_mDA3EF1B3C43FF2F4D8743CBFBA0E60E3AB1FA0E1 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_2415685961_m67C0E42AC5A00CDBB61D684C5E90D538365A14A4 (void);
+extern void NetworkedGrabRpcHandler___rpc_handler_4179772868_m60F593DAE7A0E0747F66659249FAC5E63BEA0922 (void);
+extern void NetworkedGrabRpcHandler___getTypeName_m69F45C6FFC0C6ECD5E7C278EEAD20C1F65FF3F10 (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
@@ -111,8 +163,60 @@ extern void U3CStartU3Ed__17__ctor_m09571311C977221135C6E10A3C82719F716D65FB (vo
 extern void U3CStartU3Ed__17_MoveNext_mA92CE56867C898B0C1FC42D0063861FC26057D62 (void);
 extern void U3CStartU3Ed__17_SetStateMachine_mF374385205FBF908512C1986E1891EA92E7A14F6 (void);
 extern void NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3 (void);
-static Il2CppMethodPointer s_methodPointers[104] = 
+static Il2CppMethodPointer s_methodPointers[156] = 
 {
+	NetworkedXRGrabInteractable_Awake_m9D388C829479E673D36F322F6F1BD1BC6B425730,
+	NetworkedXRGrabInteractable_OnEnable_mFFA846DEEC24F7B466D29E87401B99E0F8DDC61B,
+	NetworkedXRGrabInteractable_OnDisable_m82C5B99BE453B3BFEFD620D38B3CFC642A67E64B,
+	NetworkedXRGrabInteractable_OnHoverEnteredLocal_m94089EDC79FB0359D1CF4E90B743F8E38C1056CB,
+	NetworkedXRGrabInteractable_OnHoverExitedLocal_m956AA424EF89B15C23CF34AC0B0055694337B667,
+	NetworkedXRGrabInteractable_OnSelectEnteredLocal_m6D60F8F367CCEAB5C435F29769BC2F243494E4B6,
+	NetworkedXRGrabInteractable_OnSelectExitedLocal_mE30CB9445FE7FA9B960FBC5D135AF359FFE1861F,
+	NetworkedXRGrabInteractable_LocalCatch_m8337A74876616D5B4AC99667B97832E780AE8FDD,
+	NetworkedXRGrabInteractable_WaitForOwnershipAndCatch_m2C3D67F11EE6F15D6B4B00CE591A09D9C16699CF,
+	NetworkedXRGrabInteractable_CatchLocal_m72BD2673085AC8AFD207D2E67EAEA71F4C2499B7,
+	NetworkedXRGrabInteractable_LocalRelease_m1953AA42B0C3CCC9059DEB12F05EC3CFA11B5204,
+	NetworkedXRGrabInteractable_ReleaseLocal_mC4FC55FEBBB7F86F97A713C892F178ADBC2C90A2,
+	NetworkedXRGrabInteractable_LocalShowCatchable_mA574A5353E61C479C3DC9DACE8EED968A2733A7E,
+	NetworkedXRGrabInteractable_LocalHideCatchable_mA80624D4E2E945EDE570A5202D93144538AE572C,
+	NetworkedXRGrabInteractable_ApplyShowCaughtVisual_mFE3B087644BEF2B6104E439D8C6972F3BFC4CF38,
+	NetworkedXRGrabInteractable_ApplyShowReleasedVisual_m6C858E37DE0016385B43BF05E70E11B949131F7B,
+	NetworkedXRGrabInteractable_ApplyShowCatchableVisual_mA6923FB2A3CCF5151AEE85C0F5C0785F8F0CDD70,
+	NetworkedXRGrabInteractable_ApplyHideCatchableVisual_mDBE0861D3FE2A0BD6A33C014C0DCF1874584B438,
+	NetworkedXRGrabInteractable__ctor_m70B29D6FA8FF48D500218307E2D1C2DD4EFA1DEF,
+	U3CWaitForOwnershipAndCatchU3Ed__16__ctor_m5F3961E23908F4F13F6B3FE0C08F3559D71CDC2F,
+	U3CWaitForOwnershipAndCatchU3Ed__16_System_IDisposable_Dispose_m46F69928C05F4941CCD357E75ADB66AA5286EC1C,
+	U3CWaitForOwnershipAndCatchU3Ed__16_MoveNext_m0245DD4C46785B65FC5D29C85051BA7C3A1CCF6A,
+	U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m95BF8349DF75059F0620D2CAB3B8EBCB15D44B62,
+	U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_IEnumerator_Reset_mB511FEC3240CB59C51CF81DBD44979A105E037BB,
+	U3CWaitForOwnershipAndCatchU3Ed__16_System_Collections_IEnumerator_get_Current_m33A2E7C712849924B03C9823A9EE9C33F59FBCE4,
+	NetworkedGrabRpcHandler_NotifyShowCaught_m2F5B68D15D10526DB699D42E7680F88C2A6CF754,
+	NetworkedGrabRpcHandler_NotifyShowReleased_mAB79840C190E065E01603E2BBDFFADA48BEC832C,
+	NetworkedGrabRpcHandler_NotifyShowCatchable_m22E13C6839D37FFE8C535616F7700D273F36EFFB,
+	NetworkedGrabRpcHandler_NotifyHideCatchable_mAE1629DA3ADB3AFDC432C1F50DDD36EA92775A7E,
+	NetworkedGrabRpcHandler_RequestOwnership_m4148B89C6A78876C83D48E5557E26AB5B306C091,
+	NetworkedGrabRpcHandler_RequestOwnershipRpc_m59DCE4B655448DE398C7AB2AFE5A82855559CFFD,
+	NetworkedGrabRpcHandler_RequestShowCaughtRpc_mF64047623E6A90527EE37DCE65EAB3F570636C2D,
+	NetworkedGrabRpcHandler_RequestShowReleasedRpc_mDD19F4C4BB33F2DB85E39F95847EC311DA7C0898,
+	NetworkedGrabRpcHandler_RequestShowCatchableRpc_mC3E328D1FD71F84198D20FB8458E5A965757F756,
+	NetworkedGrabRpcHandler_RequestHideCatchableRpc_m1658D8C1340876FAE154E9C4C1D377565C8BFB2D,
+	NetworkedGrabRpcHandler_ShowCaughtRpc_m242E6DD90E70865D32463C293C60E8AB75B6E811,
+	NetworkedGrabRpcHandler_ShowReleasedRpc_m92FB0807A94CF2C8F2A2674DE678C8D4CFD0C8D6,
+	NetworkedGrabRpcHandler_ShowCatchableRpc_mD73F355903749A2458FAED6CA4492581F324F529,
+	NetworkedGrabRpcHandler_HideCatchableRpc_m15742B9A3FCE9280B9C2526ADB03C9EA8C66ADCB,
+	NetworkedGrabRpcHandler__ctor_m01FB9BBEF768160AE6532D926F8969BF684E9829,
+	NetworkedGrabRpcHandler___initializeVariables_m9441FFA811402605AF9A546C1E88DB4F47350FC1,
+	NetworkedGrabRpcHandler___initializeRpcs_m7A151AAF20238508442B56F09417C04E66F67458,
+	NetworkedGrabRpcHandler___rpc_handler_2839998672_m5E3C859C41B853CF8CE32C2F79E4B9BBD40C3D31,
+	NetworkedGrabRpcHandler___rpc_handler_2907142082_m3E1BD04FE93E8F9B42AEC28431D04D9BDC34B4B7,
+	NetworkedGrabRpcHandler___rpc_handler_4178684014_mDB99452EFC13E17CE417235F24D76BC1BC0ABEA0,
+	NetworkedGrabRpcHandler___rpc_handler_3661222921_m7327F1D0478F74464CF09F7A6C855D1936C7347B,
+	NetworkedGrabRpcHandler___rpc_handler_1485751161_m6A12E0116A2257CC69A8B20EC4B6B94B1E13E071,
+	NetworkedGrabRpcHandler___rpc_handler_1408903826_m6C92B73F97B5080168D9E755C25780C35062B0B9,
+	NetworkedGrabRpcHandler___rpc_handler_204194976_mDA3EF1B3C43FF2F4D8743CBFBA0E60E3AB1FA0E1,
+	NetworkedGrabRpcHandler___rpc_handler_2415685961_m67C0E42AC5A00CDBB61D684C5E90D538365A14A4,
+	NetworkedGrabRpcHandler___rpc_handler_4179772868_m60F593DAE7A0E0747F66659249FAC5E63BEA0922,
+	NetworkedGrabRpcHandler___getTypeName_m69F45C6FFC0C6ECD5E7C278EEAD20C1F65FF3F10,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
@@ -218,74 +322,126 @@ static Il2CppMethodPointer s_methodPointers[104] =
 	U3CStartU3Ed__17_SetStateMachine_mF374385205FBF908512C1986E1891EA92E7A14F6,
 	NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3,
 };
-static const int32_t s_InvokerIndices[104] = 
+static const int32_t s_InvokerIndices[156] = 
 {
-	23507,
-	23507,
-	39835,
-	23507,
+	23508,
+	23508,
+	23508,
 	17599,
 	17599,
 	17599,
 	17599,
-	23507,
-	23507,
-	23507,
-	23507,
-	23507,
+	23508,
+	23253,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	17506,
+	23508,
+	23007,
+	23253,
+	23508,
+	23253,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	17698,
+	17698,
+	17698,
+	17698,
+	17698,
+	17698,
+	17698,
+	17698,
+	17698,
+	23508,
+	23508,
+	23508,
+	30129,
+	30129,
+	30129,
+	30129,
+	30129,
+	30129,
+	30129,
+	30129,
+	30129,
+	23253,
+	23508,
+	23508,
+	39836,
+	23508,
 	17599,
 	17599,
-	23507,
-	23507,
-	23507,
+	17599,
+	17599,
+	23508,
+	23508,
+	23508,
+	23508,
+	23508,
+	17599,
+	17599,
+	23508,
+	23508,
+	23508,
 	8249,
-	23507,
+	23508,
 	8854,
-	23507,
-	23507,
-	23507,
-	23507,
+	23508,
+	23508,
+	23508,
+	23508,
 	17351,
-	23507,
-	23507,
-	23507,
-	23252,
+	23508,
+	23508,
+	23508,
+	23253,
 	2879,
-	23507,
-	23507,
-	23507,
-	37795,
-	37795,
-	23507,
-	23507,
+	23508,
+	23508,
+	23508,
+	37796,
+	37796,
+	23508,
+	23508,
 	17599,
-	23507,
-	23507,
-	23507,
-	23507,
-	23252,
+	23508,
+	23508,
+	23508,
+	23508,
+	23253,
 	2877,
 	8866,
-	23507,
+	23508,
 	17599,
-	17823,
-	23507,
-	23507,
-	23507,
+	17824,
+	23508,
+	23508,
+	23508,
 	17599,
-	23006,
+	23007,
 	17351,
-	23252,
+	23253,
 	17599,
-	23252,
+	23253,
 	17599,
-	23252,
+	23253,
 	17599,
-	23252,
+	23253,
 	17599,
 	2878,
 	8866,
-	23507,
+	23508,
 	17599,
 	17599,
 	17599,
@@ -293,44 +449,44 @@ static const int32_t s_InvokerIndices[104] =
 	17599,
 	17599,
 	17599,
-	23252,
+	23253,
 	3553,
-	23507,
-	17823,
-	23507,
-	23507,
-	23507,
+	23508,
+	17824,
+	23508,
+	23508,
+	23508,
 	17599,
-	23507,
-	23507,
+	23508,
+	23508,
 	17599,
-	23507,
-	23507,
-	23507,
-	23252,
-	23157,
-	23252,
+	23508,
+	23508,
+	23508,
+	23253,
+	23158,
+	23253,
 	17599,
 	17599,
 	8249,
-	23507,
-	23507,
-	23507,
+	23508,
+	23508,
+	23508,
 	17599,
 	4175,
-	23507,
-	23507,
-	23507,
-	23507,
+	23508,
+	23508,
+	23508,
+	23508,
 	17599,
-	39784,
+	39785,
 };
 extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationAssemblyU2DCSharp;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	104,
+	156,
 	s_methodPointers,
 	0,
 	NULL,
