@@ -36,10 +36,12 @@ namespace ARVRMultiplayer.Controllers
             // On s'assure qu'on est bien en AR et que les références existent
             if (_rigService.IsVR || _rigService.RigRoot == null || _rigService.Head == null) return;
 
-            // L'astuce ici : pour que la caméra (téléphone) soit à (0, height, 0),
-            // on doit décaler la racine (XR Origin) de l'inverse de la position locale de la caméra.
-            Vector3 headLocalPos = _rigService.Head.localPosition;
-            _rigService.RigRoot.position = new Vector3(-headLocalPos.x, _resetHeight, -headLocalPos.z);
+            // Cible absolue pour la caméra (monde)
+            Vector3 targetCameraWorldPos = new Vector3(0f, _resetHeight, 0f);
+
+            // On déplace la racine du même delta que la caméra doit parcourir
+            Vector3 delta = targetCameraWorldPos - _rigService.Head.position;
+            _rigService.RigRoot.position += delta;
             
             Debug.Log("Position AR réinitialisée à l'origine.");
         }
