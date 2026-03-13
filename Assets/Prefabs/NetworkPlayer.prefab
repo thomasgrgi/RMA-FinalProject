@@ -202,9 +202,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5062605508606537441, guid: 9ba9ad0e0acc5774a98cfea1fd4ccdea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494925125487140559, guid: 9ba9ad0e0acc5774a98cfea1fd4ccdea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406720017798751779, guid: 9ba9ad0e0acc5774a98cfea1fd4ccdea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6623297844488558314, guid: 9ba9ad0e0acc5774a98cfea1fd4ccdea, type: 3}
       propertyPath: m_Name
       value: VRPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958363870800583361, guid: 9ba9ad0e0acc5774a98cfea1fd4ccdea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
