@@ -1,1 +1,2 @@
+*.fbx filter=lfs diff=lfs merge=lfs -text
 Assets/Prefabs/models/import/Idle_zlorp.fbx filter=lfs diff=lfs merge=lfs -text
