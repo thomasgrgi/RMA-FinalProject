@@ -119,6 +119,7 @@ extern void U3CHandleConnectRequestedU3Ed__5_MoveNext_mAC07F513C627BEF2EFC96CA15
 extern void U3CHandleConnectRequestedU3Ed__5_SetStateMachine_m73F2BEE1DCAE9079C7253EDD2CAE98B5C9F9A8CA (void);
 extern void NetworkColorController_Awake_m563EAF16C62C055BE3AFB500C2D1202AFBCC6ED4 (void);
 extern void NetworkColorController_OnDestroy_m3FDBCD31AFD414F73F0CB7F82D7730AC4F89233A (void);
+extern void NetworkColorController_HandleHoverEntered_m89A361D38839CEBA5A57EC8BCC3079E82FE769AE (void);
 extern void NetworkColorController_HandleSelectEntered_m531F6469492F0FA604BB7819106F09028B4E0E92 (void);
 extern void NetworkColorController__ctor_m8D420AC3D804722D46E75EB270C20FCAE8785020 (void);
 extern void LocalRigService_get_IsVR_mA4738E3EE0E60226BBD249D7C54968CA7D0F647A (void);
@@ -178,7 +179,7 @@ extern void U3CStartU3Ed__17__ctor_m09571311C977221135C6E10A3C82719F716D65FB (vo
 extern void U3CStartU3Ed__17_MoveNext_mA92CE56867C898B0C1FC42D0063861FC26057D62 (void);
 extern void U3CStartU3Ed__17_SetStateMachine_mF374385205FBF908512C1986E1891EA92E7A14F6 (void);
 extern void NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3 (void);
-static Il2CppMethodPointer s_methodPointers[171] = 
+static Il2CppMethodPointer s_methodPointers[172] = 
 {
 	NetworkedXRGrabInteractable_Awake_m9D388C829479E673D36F322F6F1BD1BC6B425730,
 	NetworkedXRGrabInteractable_OnEnable_mFFA846DEEC24F7B466D29E87401B99E0F8DDC61B,
@@ -292,6 +293,7 @@ static Il2CppMethodPointer s_methodPointers[171] =
 	U3CHandleConnectRequestedU3Ed__5_SetStateMachine_m73F2BEE1DCAE9079C7253EDD2CAE98B5C9F9A8CA,
 	NetworkColorController_Awake_m563EAF16C62C055BE3AFB500C2D1202AFBCC6ED4,
 	NetworkColorController_OnDestroy_m3FDBCD31AFD414F73F0CB7F82D7730AC4F89233A,
+	NetworkColorController_HandleHoverEntered_m89A361D38839CEBA5A57EC8BCC3079E82FE769AE,
 	NetworkColorController_HandleSelectEntered_m531F6469492F0FA604BB7819106F09028B4E0E92,
 	NetworkColorController__ctor_m8D420AC3D804722D46E75EB270C20FCAE8785020,
 	LocalRigService_get_IsVR_mA4738E3EE0E60226BBD249D7C54968CA7D0F647A,
@@ -352,7 +354,7 @@ static Il2CppMethodPointer s_methodPointers[171] =
 	U3CStartU3Ed__17_SetStateMachine_mF374385205FBF908512C1986E1891EA92E7A14F6,
 	NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3,
 };
-static const int32_t s_InvokerIndices[171] = 
+static const int32_t s_InvokerIndices[172] = 
 {
 	23510,
 	23510,
@@ -467,6 +469,7 @@ static const int32_t s_InvokerIndices[171] =
 	23510,
 	23510,
 	17601,
+	17601,
 	23510,
 	23009,
 	17353,
@@ -531,7 +534,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	171,
+	172,
 	s_methodPointers,
 	0,
 	NULL,
