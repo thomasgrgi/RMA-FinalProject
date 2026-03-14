@@ -31,19 +31,19 @@ static const Il2CppMethodExecutionContextInfoIndex g_methodExecutionContextInfoI
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_InternalAPIEngineBridge_004[];
 Il2CppSequencePoint g_sequencePointsUnity_InternalAPIEngineBridge_004[13] = 
 {
-	{ 132604, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
-	{ 132604, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
-	{ 132604, 1, 41, 41, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
-	{ 132604, 1, 42, 48, 13, 15, 1, kSequencePointKind_Normal, 0, 3 },
-	{ 132604, 1, 42, 48, 13, 15, 24, kSequencePointKind_StepOut, 0, 4 },
-	{ 132604, 1, 42, 48, 13, 15, 49, kSequencePointKind_StepOut, 0, 5 },
-	{ 132604, 1, 49, 49, 9, 10, 87, kSequencePointKind_Normal, 0, 6 },
-	{ 132606, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 7 },
-	{ 132606, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 8 },
-	{ 132606, 2, 10, 10, 9, 10, 0, kSequencePointKind_Normal, 0, 9 },
-	{ 132606, 2, 11, 11, 13, 29, 1, kSequencePointKind_Normal, 0, 10 },
-	{ 132606, 2, 11, 11, 13, 29, 2, kSequencePointKind_StepOut, 0, 11 },
-	{ 132606, 2, 12, 12, 9, 10, 8, kSequencePointKind_Normal, 0, 12 },
+	{ 132605, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
+	{ 132605, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
+	{ 132605, 1, 41, 41, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
+	{ 132605, 1, 42, 48, 13, 15, 1, kSequencePointKind_Normal, 0, 3 },
+	{ 132605, 1, 42, 48, 13, 15, 24, kSequencePointKind_StepOut, 0, 4 },
+	{ 132605, 1, 42, 48, 13, 15, 49, kSequencePointKind_StepOut, 0, 5 },
+	{ 132605, 1, 49, 49, 9, 10, 87, kSequencePointKind_Normal, 0, 6 },
+	{ 132607, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 7 },
+	{ 132607, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 8 },
+	{ 132607, 2, 10, 10, 9, 10, 0, kSequencePointKind_Normal, 0, 9 },
+	{ 132607, 2, 11, 11, 13, 29, 1, kSequencePointKind_Normal, 0, 10 },
+	{ 132607, 2, 11, 11, 13, 29, 2, kSequencePointKind_StepOut, 0, 11 },
+	{ 132607, 2, 12, 12, 9, 10, 8, kSequencePointKind_Normal, 0, 12 },
 };
 #else
 extern Il2CppSequencePoint g_sequencePointsUnity_InternalAPIEngineBridge_004[];
