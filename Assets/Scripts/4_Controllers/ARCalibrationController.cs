@@ -7,7 +7,7 @@ namespace ARVRMultiplayer.Controllers
 {
     /// <summary>
     /// Écoute la détection d'images et aligne l'AR Rig pour que le marqueur
-    /// corresponde au centre du monde (0,0,0).
+    /// corresponde au repère défini.
     /// </summary>
     public class ARCalibrationController : MonoBehaviour
     {
@@ -22,8 +22,8 @@ namespace ARVRMultiplayer.Controllers
         [SerializeField, Tooltip("Le nom exact de l'image de référence dans la librairie Unity.")] 
         private string _targetImageName = "CenterMarker";
 
-        [SerializeField, Tooltip("Le point virtuel sur lequel le marqueur doit s'aligner (laissez vide pour Vector3.zero).")] 
-        private Transform _virtualCenterAnchor;
+        [SerializeField, Tooltip("Le GameObject cible virtuelle auquel le marqueur détecté doit s'aligner.")]
+        private GameObject _virtualTarget;
 
         private bool _isCalibrated = false;
 
@@ -78,11 +78,17 @@ namespace ARVRMultiplayer.Controllers
                 return;
             }
 
+            if (_virtualTarget == null)
+            {
+                Debug.LogWarning("[AR Calibration] Calibration impossible : aucune cible virtuelle n'est assignée.");
+                return;
+            }
+
             Debug.Log($"[AR Calibration] Marqueur '{_targetImageName}' détecté. Alignement en cours...");
 
-            // Définition de la cible virtuelle (0,0,0 par défaut, ou un objet spécifique)
-            Vector3 targetPosition = _virtualCenterAnchor != null ? _virtualCenterAnchor.position : Vector3.zero;
-            Quaternion targetRotation = _virtualCenterAnchor != null ? _virtualCenterAnchor.rotation : Quaternion.identity;
+            Transform virtualTargetTransform = _virtualTarget.transform;
+            Vector3 targetPosition = virtualTargetTransform.position;
+            Quaternion targetRotation = virtualTargetTransform.rotation;
             Debug.Log($"[AR Calibration] Pose cible. Position: {targetPosition}, rotation: {targetRotation.eulerAngles}.");
 
             // Recalcule explicitement la pose de l'Origin pour que le marqueur détecté

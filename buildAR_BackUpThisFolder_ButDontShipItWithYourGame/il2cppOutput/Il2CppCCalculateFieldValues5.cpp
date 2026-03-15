@@ -14765,7 +14765,7 @@ struct ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F  : publ
 	ARImageTrackingService_tCC08A60EF1C7FEF09413F3B69977DAE017286988* ____trackingService;
 	XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* ____xrOrigin;
 	String_t* ____targetImageName;
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____virtualCenterAnchor;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____virtualTarget;
 	bool ____isCalibrated;
 };
 struct ARContactSpawnTrigger_tD8F640BDF4DDE156DDC4531321BC98B245945267  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -19074,7 +19074,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16122[2] =
 	static_cast<int32_t>(offsetof(NetworkColorView_tC4BD6BCACCC86E102F83EE875C4E47A362944580, ____renderer)),static_cast<int32_t>(offsetof(NetworkColorView_tC4BD6BCACCC86E102F83EE875C4E47A362944580, ____state)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16123[5] = 
 {
-	static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____trackingService)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____xrOrigin)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____targetImageName)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____virtualCenterAnchor)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____isCalibrated)),};
+	static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____trackingService)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____xrOrigin)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____targetImageName)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____virtualTarget)),static_cast<int32_t>(offsetof(ARCalibrationController_t3624711684CEA9D708275996B18ACFF5F5CCC83F, ____isCalibrated)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16124[5] = 
 {
 	static_cast<int32_t>(offsetof(ARHUDController_tEAE764267CFDF51DA82430D1FE9BEF23EB95455E, ____rigService)),static_cast<int32_t>(offsetof(ARHUDController_tEAE764267CFDF51DA82430D1FE9BEF23EB95455E, ____hudView)),static_cast<int32_t>(offsetof(ARHUDController_tEAE764267CFDF51DA82430D1FE9BEF23EB95455E, ____menuPanel)),static_cast<int32_t>(offsetof(ARHUDController_tEAE764267CFDF51DA82430D1FE9BEF23EB95455E, ____resetHeight)),static_cast<int32_t>(offsetof(ARHUDController_tEAE764267CFDF51DA82430D1FE9BEF23EB95455E, ____isMenuVisible)),};
