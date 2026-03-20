@@ -41,6 +41,14 @@ namespace ARVRMultiplayer.Controllers
         private void OnGrabbed(SelectEnterEventArgs args)
         {
             Debug.Log($"[CubeGrabHandler] {gameObject.name} attrapé par {args.interactorObject}");
+    
+            // Log ownership NGO
+            var netObj = GetComponent<Unity.Netcode.NetworkObject>();
+            if (netObj != null)
+                Debug.Log($"[CubeGrabHandler] NetworkObject owner : ClientId={netObj.OwnerClientId} | IsOwner={netObj.IsOwner}");
+            else
+                Debug.LogWarning("[CubeGrabHandler] Pas de NetworkObject sur SharedCube !");
+
             OnCubeGrabbed?.Invoke();
         }
 

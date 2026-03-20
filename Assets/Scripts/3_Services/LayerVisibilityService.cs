@@ -16,6 +16,7 @@ namespace ARVRMultiplayer.Services
         [Header("Layer dédié au color_cube (AR only)")] 
         [SerializeField] private string _arOnlyLayerName = "AR_Only";
         
+        [SerializeField] private GameObject _colorCube;
         private int _arOnlyLayer = -1;
 
         private void Awake()
@@ -32,6 +33,7 @@ namespace ARVRMultiplayer.Services
         private void Start()
         {
             ConfigureCameraCulling();
+            ApplyLayerToInstance(_colorCube); // plus besoin d'attendre le spawn
         }
 
         /// <summary>
@@ -60,11 +62,21 @@ namespace ARVRMultiplayer.Services
         {
             if (_arOnlyLayer == -1) return;
 
+            // Vérification anti-erreur
+            if (_vrCamera == _arCamera)
+            {
+                Debug.LogError("[LayerVisibilityService] _vrCamera et _arCamera pointent vers le même objet ! " +
+                               "Assignez les caméras correctes dans l'inspecteur.");
+                return;
+            }
+
             _vrCamera.cullingMask &= ~(1 << _arOnlyLayer);
-            Debug.Log($"[LayerVisibilityService] Caméra VR : layer '{_arOnlyLayerName}' masqué.");
+            Debug.Log($"[LayerVisibilityService] Caméra VR ({_vrCamera.name}) : layer '{_arOnlyLayerName}' masqué. " +
+                      $"CullingMask = {_vrCamera.cullingMask}");
 
             _arCamera.cullingMask |= (1 << _arOnlyLayer);
-            Debug.Log($"[LayerVisibilityService] Caméra AR : layer '{_arOnlyLayerName}' visible.");
+            Debug.Log($"[LayerVisibilityService] Caméra AR ({_arCamera.name}) : layer '{_arOnlyLayerName}' visible. " +
+                      $"CullingMask = {_arCamera.cullingMask}");
         }
 
         private void SetLayerRecursively(GameObject obj, int layer)
