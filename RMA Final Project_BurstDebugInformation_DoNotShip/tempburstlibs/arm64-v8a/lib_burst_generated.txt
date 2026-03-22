@@ -1,4 +1,4 @@
-Library: G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+Library: C:\Users\thoma\3A\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --platform=Android
 --minimum-os-version=
 --backend=burst-llvm-19
@@ -11,10 +11,10 @@ Library: G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_b
 --target-framework=NetFramework
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=G:\RVSI\RMA-FinalProject\Temp\Burst
---key-folder=G:/RVSI/Hub/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=G:\RVSI\RMA-FinalProject\Library\Burst
---output=G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--temp-folder=C:\Users\thoma\3A\RMA-FinalProject\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\thoma\3A\RMA-FinalProject\Library\Burst
+--output=C:\Users\thoma\3A\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a
@@ -29,10 +29,10 @@ Library: G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_b
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=G:\RVSI\RMA-FinalProject\Temp\Burst
---key-folder=G:/RVSI/Hub/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=G:\RVSI\RMA-FinalProject\Library\Burst
---output=G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--temp-folder=C:\Users\thoma\3A\RMA-FinalProject\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\thoma\3A\RMA-FinalProject\Library\Burst
+--output=C:\Users\thoma\3A\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -145,10 +145,10 @@ Library: G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_b
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=G:\RVSI\RMA-FinalProject\Temp\Burst
---key-folder=G:/RVSI/Hub/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=G:\RVSI\RMA-FinalProject\Library\Burst
---output=G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--temp-folder=C:\Users\thoma\3A\RMA-FinalProject\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\thoma\3A\RMA-FinalProject\Library\Burst
+--output=C:\Users\thoma\3A\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Jobs.Float4TweenJob, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Jobs.Float4TweenJob&, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--34aec427743d7d01c0cb7a219c9fbe32
@@ -169,10 +169,10 @@ Library: G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_b
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=G:\RVSI\RMA-FinalProject\Temp\Burst
---key-folder=G:/RVSI/Hub/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=G:\RVSI\RMA-FinalProject\Library\Burst
---output=G:\RVSI\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--temp-folder=C:\Users\thoma\3A\RMA-FinalProject\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\thoma\3A\RMA-FinalProject\Library\Burst
+--output=C:\Users\thoma\3A\RMA-FinalProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=UnityEngine.Rendering.InstanceDataSystemBurst, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::FreeInstances(Unity.Collections.NativeArray`1+ReadOnly[[UnityEngine.Rendering.InstanceHandle, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|UnityEngine.Rendering.InstanceAllocators&, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|UnityEngine.Rendering.CPUInstanceData&, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|UnityEngine.Rendering.CPUPerCameraInstanceData&, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|UnityEngine.Rendering.CPUSharedInstanceData&, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Collections.NativeParallelMultiHashMap`2[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[UnityEngine.Rendering.InstanceHandle, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--e3ec85dbfb115f04962960abd8f31fec
