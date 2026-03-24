@@ -5322,6 +5322,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99e7e97a37b90c43843cfc25bbc0cbe, type: 3}
+--- !u!20 &832957293 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6351938344976837080, guid: f99e7e97a37b90c43843cfc25bbc0cbe, type: 3}
+  m_PrefabInstance: {fileID: 832957292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833712340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9031,8 +9036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661d73601f85407ab9e590c08b6f0011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Services.LayerVisibilityService
-  _vrCamera: {fileID: 0}
-  _arCamera: {fileID: 0}
+  _vrCamera: {fileID: 832957293}
+  _arCamera: {fileID: 2121366381}
   _arOnlyLayerName: AR_Only
   _colorCube: {fileID: 272655104}
 --- !u!114 &1512246212
@@ -12974,6 +12979,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1506c9ac2a0f96d428e8e132aab07c04, type: 3}
+--- !u!20 &2121366381 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4801195486599283519, guid: 1506c9ac2a0f96d428e8e132aab07c04, type: 3}
+  m_PrefabInstance: {fileID: 2121366380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2135095683
 GameObject:
   m_ObjectHideFlags: 0
