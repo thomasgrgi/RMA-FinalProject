@@ -413,6 +413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3670198240022635239}
     m_Modifications:
+    - target: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Name
+      value: VR Camera
+      objectReference: {fileID: 0}
     - target: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 55
@@ -652,7 +656,7 @@ PrefabInstance:
       addedObject: {fileID: 7982043599626548544}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e67fc41581ae54d42b2d7c27fd71199e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7188864670244579018}
+      addedObject: {fileID: 2092497209713348774}
   m_SourcePrefab: {fileID: 100100000, guid: e67fc41581ae54d42b2d7c27fd71199e, type: 3}
 --- !u!4 &266858746345133166 stripped
 Transform:
@@ -1015,7 +1019,7 @@ MonoBehaviour:
   - {fileID: 7947287673516265673}
   - {fileID: 3062599554508494349}
   - {fileID: 421083956801329016}
---- !u!114 &7188864670244579018
+--- !u!114 &2092497209713348774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1024,7 +1028,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9124911305646293850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8411ef24a6b1d65468b4bd83329985ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 00eb47c26ccd66a4e95cbd1ee7bcdb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvatarController
   head:
