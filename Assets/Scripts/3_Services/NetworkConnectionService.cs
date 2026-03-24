@@ -71,13 +71,29 @@ namespace ARVRMultiplayer.Services
             }
         }
 
-        public void Disconnect()
+        public async Task DisconnectAsync()
         {
-            _currentSession?.LeaveAsync();
+            if (_currentSession != null)
+            {
+                try
+                {
+                    await _currentSession.LeaveAsync();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Échec lors de la déconnexion de la session : {e.Message}");
+                }
+            }
+
             if (_networkManager != null && _networkManager.IsConnectedClient)
             {
                 _networkManager.Shutdown();
             }
+        }
+
+        public void Disconnect()
+        {
+            _ = DisconnectAsync();
         }
 
         private void HandleClientConnected(ulong clientId)

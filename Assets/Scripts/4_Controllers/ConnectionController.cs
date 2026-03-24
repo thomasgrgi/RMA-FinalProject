@@ -33,6 +33,7 @@ namespace ARVRMultiplayer.Controllers
 
             // Abonnement aux événements de la Vue
             _view.OnConnectButtonClicked += HandleConnectRequested;
+            _view.OnDisconnectButtonClicked += HandleDisconnectRequested;
 
             // Initialisation de la vue avec l'état actuel
             _model.SetStatus(NetworkStateModel.ConnectionStatus.Disconnected);
@@ -61,6 +62,13 @@ namespace ARVRMultiplayer.Controllers
             Debug.Log($"Client {clientId} a rejoint la partie.");
         }
 
+        private async void HandleDisconnectRequested()
+        {
+            await _service.DisconnectAsync();
+            _model.SetStatus(NetworkStateModel.ConnectionStatus.Disconnected);
+            Debug.Log("Déconnexion réseau effectuée.");
+        }
+
         public void Cleanup()
         {
             _service.OnConnectionSuccess -= HandleConnectionSuccess;
@@ -68,6 +76,7 @@ namespace ARVRMultiplayer.Controllers
             _service.OnClientConnected -= HandleClientConnected;
             _model.OnStatusChanged -= _view.UpdateView;
             _view.OnConnectButtonClicked -= HandleConnectRequested;
+            _view.OnDisconnectButtonClicked -= HandleDisconnectRequested;
         }
     }
 }
