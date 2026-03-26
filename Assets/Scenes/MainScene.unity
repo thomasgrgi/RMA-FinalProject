@@ -1650,6 +1650,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &393106704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393106705}
+  - component: {fileID: 393106706}
+  m_Layer: 0
+  m_Name: RoomAnchor_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393106705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393106704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.74, y: 0, z: 0.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 913839670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393106706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393106704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84364a5ae4ad35542bc8abb53f34dacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Controllers.RoomManager
+  roomIndex: 1
+  roomName: Room1
+  teleporter: {fileID: 1358538528}
 --- !u!1 &393968759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2388,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518747217}
   m_CullTransparentMesh: 1
+--- !u!1 &560477451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560477452}
+  - component: {fileID: 560477453}
+  m_Layer: 0
+  m_Name: RoomAnchor_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560477452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560477451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -7.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 913839670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560477453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560477451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84364a5ae4ad35542bc8abb53f34dacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Controllers.RoomManager
+  roomIndex: 2
+  roomName: Room2
+  teleporter: {fileID: 1720005103}
 --- !u!1 &590669281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2562,115 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &625967718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 460674752087077055, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_Name
+      value: Puzzle2_Terminal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.049999967
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 71491911
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SecretCode
+      value: 8642
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 560477453}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPuzzleSolved
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ARVRMultiplayer.Controllers.RoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2860636913
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
 --- !u!1 &647500971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,6 +3680,10 @@ Transform:
   - {fileID: 1879381335}
   - {fileID: 1933561200}
   - {fileID: 1662605989}
+  - {fileID: 1822661092}
+  - {fileID: 393106705}
+  - {fileID: 560477452}
+  - {fileID: 2028682290}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &928320647 stripped
@@ -3484,6 +3691,115 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1561526484743996423, guid: 79fbd536562c95848bf6d077d635f12a, type: 3}
   m_PrefabInstance: {fileID: 2072051978}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &937350822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 460674752087077055, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_Name
+      value: Puzzle0_Terminal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2582259075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SecretCode
+      value: 1234
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1822661093}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPuzzleSolved
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ARVRMultiplayer.Controllers.RoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3047126097
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
 --- !u!1 &945655980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4858,6 +5174,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: teleporter_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1895489914}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeleporterService, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.01
@@ -4932,6 +5280,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
   m_PrefabInstance: {fileID: 1358538526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1358538528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1358538526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f417da3569d9348b74d9d08342a99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterActivatorController
 --- !u!1 &1385256258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5502,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: teleporter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1493894198}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeleporterService, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.01
@@ -5207,6 +5598,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 1135644085}
+    - target: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: startActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5217,6 +5612,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
   m_PrefabInstance: {fileID: 1493894195}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1493894197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1493894195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f417da3569d9348b74d9d08342a99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterActivatorController
+--- !u!114 &1493894198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1493894195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105c3f84faecacf488c6d429da9f08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleporter
 --- !u!1 &1498875036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 277e2354da820cd40a9f181de8409a0d, type: 3}
@@ -6640,6 +7057,115 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1001 &1701688672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 460674752087077055, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_Name
+      value: Puzzle1_Terminal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368059210614918864, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2057830964
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313346768344181953, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: SecretCode
+      value: 1267
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 393106706}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPuzzleSolved
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ARVRMultiplayer.Controllers.RoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566887219735458322, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3160707586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591953702832581190, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 2908893917
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ef3e3e69a9d794fbd0b10f3559decc, type: 3}
 --- !u!1001 &1720005101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6651,6 +7177,38 @@ PrefabInstance:
     - target: {fileID: 2799889213639955609, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_Name
       value: teleporter_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1720005104}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeleporterService, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_LocalScale.x
@@ -6666,7 +7224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.15
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6726,6 +7284,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
   m_PrefabInstance: {fileID: 1720005101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720005103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1720005101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f417da3569d9348b74d9d08342a99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterActivatorController
+--- !u!114 &1720005104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1720005101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105c3f84faecacf488c6d429da9f08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleporter
 --- !u!1001 &1723868015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6905,6 +7485,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5353231230243643658, guid: 92a1b85a75be3ca4abf6d70e2234db21, type: 3}
   m_PrefabInstance: {fileID: 6701285732655928224}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1822661091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822661092}
+  - component: {fileID: 1822661093}
+  m_Layer: 0
+  m_Name: RoomAnchor_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1822661092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822661091}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 913839670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822661093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822661091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84364a5ae4ad35542bc8abb53f34dacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Controllers.RoomManager
+  roomIndex: 0
+  roomName: Room0
+  teleporter: {fileID: 1493894197}
 --- !u!1 &1873710395
 GameObject:
   m_ObjectHideFlags: 0
@@ -7079,6 +7706,17 @@ Transform:
   - {fileID: 1107870623}
   m_Father: {fileID: 913839670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895489914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 1358538526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105c3f84faecacf488c6d429da9f08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleporter
 --- !u!1001 &1933561199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7416,6 +8054,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1561526484743996423, guid: 79fbd536562c95848bf6d077d635f12a, type: 3}
   m_PrefabInstance: {fileID: 1723868015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2028682289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028682290}
+  - component: {fileID: 2028682291}
+  m_Layer: 0
+  m_Name: RoomAnchor_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028682290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028682289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.14, y: 0, z: 0.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 913839670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028682291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028682289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84364a5ae4ad35542bc8abb53f34dacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Controllers.RoomManager
+  roomIndex: 3
+  roomName: Room3
+  teleporter: {fileID: 2045970568}
 --- !u!1001 &2045970566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7502,6 +8187,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976821037641887020, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
   m_PrefabInstance: {fileID: 2045970566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045970568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+  m_PrefabInstance: {fileID: 2045970566}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f417da3569d9348b74d9d08342a99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterActivatorController
+--- !u!1 &2050161366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050161368}
+  - component: {fileID: 2050161367}
+  m_Layer: 0
+  m_Name: _GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2050161367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050161366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa424ab8eef8a64cac43fabd4d29212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Services.RoomProgressionManager
+  rooms:
+  - {fileID: 1822661093}
+  - {fileID: 393106706}
+  - {fileID: 560477453}
+  - {fileID: 2028682291}
+--- !u!4 &2050161368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050161366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.54111, y: 1.25762, z: 0.34938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070043578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8418,3 +9163,7 @@ SceneRoots:
   - {fileID: 272655114}
   - {fileID: 945655981}
   - {fileID: 2204720024416247671}
+  - {fileID: 2050161368}
+  - {fileID: 937350822}
+  - {fileID: 1701688672}
+  - {fileID: 625967718}
