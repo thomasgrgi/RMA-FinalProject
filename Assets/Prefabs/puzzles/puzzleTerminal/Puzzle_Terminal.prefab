@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2908893917
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -226,9 +226,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Controllers.KeyPadService
   SecretCode: 
-  _digitButtons: []
-  _okButton: {fileID: 0}
-  _clearButton: {fileID: 0}
+  _digitButtons:
+  - Digit: 48
+    Interactable: {fileID: 3443485449853481596}
+  - Digit: 49
+    Interactable: {fileID: 8864389927232732377}
+  - Digit: 50
+    Interactable: {fileID: 3923155222733796815}
+  - Digit: 51
+    Interactable: {fileID: 5729210039467449602}
+  - Digit: 52
+    Interactable: {fileID: 1580007274157293560}
+  - Digit: 53
+    Interactable: {fileID: 6842520936917989610}
+  - Digit: 54
+    Interactable: {fileID: 5007192245705450789}
+  - Digit: 55
+    Interactable: {fileID: 2975211451568919376}
+  - Digit: 56
+    Interactable: {fileID: 7768893566638147854}
+  - Digit: 57
+    Interactable: {fileID: 6461447177739321311}
+  _okButton: {fileID: 8817416990700814924}
+  _clearButton: {fileID: 1547602859208098186}
   _onSuccess:
     m_PersistentCalls:
       m_Calls: []
