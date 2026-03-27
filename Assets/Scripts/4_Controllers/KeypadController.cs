@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using ARVRMultiplayer.Models;
+using Unity.Collections;
 using System;
 
 namespace ARVRMultiplayer.Controllers
@@ -27,6 +28,9 @@ namespace ARVRMultiplayer.Controllers
         [Header("Boutons d'Action")]
         [SerializeField] private XRBaseInteractable _okButton;
         [SerializeField] private XRBaseInteractable _clearButton;
+
+        [Header("Code Secret")]
+        [SerializeField] private string _secretCode = "0000";
 
         private NetworkKeypadState _state;
         
@@ -91,7 +95,7 @@ namespace ARVRMultiplayer.Controllers
             if (!CanPress()) return;
             
             Debug.Log("[Keypad] Touche OK pressée. Validation en cours...");
-            _state.ValidateRpc();
+            _state.ValidateRpc(new FixedString32Bytes(_secretCode));
         }
 
         private void HandleClearPressed()

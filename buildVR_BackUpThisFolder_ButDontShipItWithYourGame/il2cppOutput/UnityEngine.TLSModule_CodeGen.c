@@ -57,11 +57,11 @@ static const int32_t s_InvokerIndices[17] =
 	30300,
 	34858,
 	34858,
-	8562,
+	8563,
 	1700,
-	8562,
+	8563,
 	1700,
-	8562,
+	8563,
 	594,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TLSModule_CodeGenModule;

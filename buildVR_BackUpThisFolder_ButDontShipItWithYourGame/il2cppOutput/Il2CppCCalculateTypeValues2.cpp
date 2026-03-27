@@ -7194,7 +7194,7 @@ struct U3CU3Ec__DisplayClass11_0_t7E4B080DFB9059E783502ED8AE60A82B67E5B041  : pu
 	Il2CppChar ___digitToSubmit;
 	KeyPadService_tD55CF0EAB56DEEA67273A0B5AFE0A7E9BCB9A533* ___U3CU3E4__this;
 };
-struct U3CU3Ec__DisplayClass7_0_t1244BC0D647B99DB4706DF24E55A682FA700FFF2  : public RuntimeObject
+struct U3CU3Ec__DisplayClass8_0_t78CAFB6B4234A727A7169696F24FC4B128C02F61  : public RuntimeObject
 {
 	Il2CppChar ___digitToSubmit;
 	KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61* ___U3CU3E4__this;
@@ -33115,6 +33115,7 @@ struct U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6  : publ
 	RuntimeObject* ___U3CU3E2__current;
 	KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A* ___U3CU3E4__this;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___targetColor;
+	bool ___shouldRevert;
 };
 struct LeftShiftByte_t843792A138E33DD93E48E0FDEA65B3D12C5E19D7  : public LeftShiftInstruction_t72CB13FF7C417682A66F389D18BEE12FB16A8CD5
 {
@@ -49496,6 +49497,7 @@ struct KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61  : public Mono
 	KeypadDigitButtonU5BU5D_tB54F16D6BEA0A25A4A519BED775AA237FB999F9C* ____digitButtons;
 	XRBaseInteractable_t76185BD6DF3BC86B3CDD82E6368C3C7157E39AE4* ____okButton;
 	XRBaseInteractable_t76185BD6DF3BC86B3CDD82E6368C3C7157E39AE4* ____clearButton;
+	String_t* ____secretCode;
 	NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9* ____state;
 	float ____lastInputTime;
 };
@@ -51050,7 +51052,6 @@ struct NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9  : public Ne
 	NetworkVariable_1_t60AB2B07FAE2351A3136FEEDB962B52D54D07F7F* ___CurrentInput;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnValidationSuccess;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnValidationFailure;
-	String_t* ____targetCode;
 	int32_t ____maxDigits;
 };
 struct NetworkedGrabRpcHandler_t21D9C2246A261F8D324FDD985306B77B0AFA1D96  : public NetworkBehaviour_t1F9CC6E5B76D29ECECBB61F02D8E8EDE24CDDDCE
@@ -68468,7 +68469,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize15826 = { sizeof(Environment
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15827;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize15827 = { sizeof(KeypadDigitButton_t5A63772C9EEE783B1CE8651AD601F61B4CF665B6)+ sizeof(RuntimeObject), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15828;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize15828 = { sizeof(U3CU3Ec__DisplayClass7_0_t1244BC0D647B99DB4706DF24E55A682FA700FFF2), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize15828 = { sizeof(U3CU3Ec__DisplayClass8_0_t78CAFB6B4234A727A7169696F24FC4B128C02F61), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15829;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize15829 = { sizeof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15830;

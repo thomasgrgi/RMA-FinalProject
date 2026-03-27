@@ -83,16 +83,16 @@ namespace ARVRMultiplayer.Controllers
             Debug.Log($"[Keypad] OK. Saisie : '{entered}' — attendu : '{SecretCode}'");
 
             // Tell the network regardless, so the display stays in sync.
-            _state.ValidateRpc();
+            _state.ValidateRpc(new Unity.Collections.FixedString32Bytes(SecretCode));
 
             if (entered == SecretCode)
             {
-                Debug.Log("🎉 [Keypad] Code correct !");
+                Debug.Log("[Keypad] Code correct !");
                 _onSuccess?.Invoke();
             }
             else
             {
-                Debug.Log("❌ [Keypad] Code incorrect.");
+                Debug.Log("[Keypad] Code incorrect.");
                 _onFailure?.Invoke();
             }
 

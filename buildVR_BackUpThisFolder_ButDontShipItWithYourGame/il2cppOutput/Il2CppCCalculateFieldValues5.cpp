@@ -2503,7 +2503,7 @@ struct U3CU3Ec__DisplayClass11_0_t7E4B080DFB9059E783502ED8AE60A82B67E5B041  : pu
 	Il2CppChar ___digitToSubmit;
 	KeyPadService_tD55CF0EAB56DEEA67273A0B5AFE0A7E9BCB9A533* ___U3CU3E4__this;
 };
-struct U3CU3Ec__DisplayClass7_0_t1244BC0D647B99DB4706DF24E55A682FA700FFF2  : public RuntimeObject
+struct U3CU3Ec__DisplayClass8_0_t78CAFB6B4234A727A7169696F24FC4B128C02F61  : public RuntimeObject
 {
 	Il2CppChar ___digitToSubmit;
 	KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61* ___U3CU3E4__this;
@@ -9435,6 +9435,7 @@ struct U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6  : publ
 	RuntimeObject* ___U3CU3E2__current;
 	KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A* ___U3CU3E4__this;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___targetColor;
+	bool ___shouldRevert;
 };
 struct ScriptEvent_t98D7BEA7A83AEC5AC0316FCED0B85028D4E75DAD 
 {
@@ -15916,6 +15917,7 @@ struct KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61  : public Mono
 	KeypadDigitButtonU5BU5D_tB54F16D6BEA0A25A4A519BED775AA237FB999F9C* ____digitButtons;
 	XRBaseInteractable_t76185BD6DF3BC86B3CDD82E6368C3C7157E39AE4* ____okButton;
 	XRBaseInteractable_t76185BD6DF3BC86B3CDD82E6368C3C7157E39AE4* ____clearButton;
+	String_t* ____secretCode;
 	NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9* ____state;
 	float ____lastInputTime;
 };
@@ -16424,7 +16426,6 @@ struct NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9  : public Ne
 	NetworkVariable_1_t60AB2B07FAE2351A3136FEEDB962B52D54D07F7F* ___CurrentInput;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnValidationSuccess;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnValidationFailure;
-	String_t* ____targetCode;
 	int32_t ____maxDigits;
 };
 struct RotationAxisLockGrabTransformer_t607B7577937EE7AD454A59499B6266FBA4832DD7  : public XRBaseGrabTransformer_t928B47DA234790117C35A173C92AF6A7776F48AE
@@ -19890,9 +19891,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15810[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15811[8] = 
 {
 	static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____lightToDisable)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____lightToEnable)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____objectToShow)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____defaultAmbientIntensity)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____defaultReflectionIntensity)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____alternateAmbientIntensity)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____alternateReflectionIntensity)),static_cast<int32_t>(offsetof(EnvironmentView_tE1F3544BF77CBE0F6526B94C681A6C3C46C29C4B, ____state)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15812[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15812[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___targetColor)),};
+	static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___targetColor)),static_cast<int32_t>(offsetof(U3CBlinkRoutineU3Ed__13_tFCAF18958EAD5B7612505688EA5A2D24220369C6, ___shouldRevert)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15813[7] = 
 {
 	static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____displayText)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____buttonRenderers)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____errorColor)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____successColor)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____blinkDuration)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____state)),static_cast<int32_t>(offsetof(KeypadView_t621E291EE1760B8F7D1DD29C3411D5E77E31B94A, ____originalColors)),};
@@ -19940,10 +19941,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15827[2] =
 	static_cast<int32_t>(offsetof(KeypadDigitButton_t5A63772C9EEE783B1CE8651AD601F61B4CF665B6, ___Digit)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(KeypadDigitButton_t5A63772C9EEE783B1CE8651AD601F61B4CF665B6, ___Interactable)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15828[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass7_0_t1244BC0D647B99DB4706DF24E55A682FA700FFF2, ___digitToSubmit)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass7_0_t1244BC0D647B99DB4706DF24E55A682FA700FFF2, ___U3CU3E4__this)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15829[6] = 
+	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass8_0_t78CAFB6B4234A727A7169696F24FC4B128C02F61, ___digitToSubmit)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass8_0_t78CAFB6B4234A727A7169696F24FC4B128C02F61, ___U3CU3E4__this)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15829[7] = 
 {
-	static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____digitButtons)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____okButton)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____clearButton)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____state)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____lastInputTime)),0,};
+	static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____digitButtons)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____okButton)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____clearButton)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____secretCode)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____state)),static_cast<int32_t>(offsetof(KeypadController_t4BE343660762F3F26CDE20218456D9DDD8BB9A61, ____lastInputTime)),0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15830[2] = 
 {
 	static_cast<int32_t>(offsetof(NetworkColorController_tFBB5B35223B8E0E639418A78FE323089FD091029, ____state)),static_cast<int32_t>(offsetof(NetworkColorController_tFBB5B35223B8E0E639418A78FE323089FD091029, ____interactable)),};
@@ -19989,9 +19990,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15843[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15844[2] = 
 {
 	static_cast<int32_t>(offsetof(NetworkEnvironmentState_t88E571F492BF901612BF8663C34AA28AB484D899, ___IsAlternateMode)),static_cast<int32_t>(offsetof(NetworkEnvironmentState_t88E571F492BF901612BF8663C34AA28AB484D899_StaticFields, ___OnAlternateModeChanged)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15845[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15845[4] = 
 {
-	static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___CurrentInput)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___OnValidationSuccess)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___OnValidationFailure)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ____targetCode)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ____maxDigits)),};
+	static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___CurrentInput)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___OnValidationSuccess)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ___OnValidationFailure)),static_cast<int32_t>(offsetof(NetworkKeypadState_t13C526EE76E85DACC5A601ECAFA217F9733A77E9, ____maxDigits)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable15846[5] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};

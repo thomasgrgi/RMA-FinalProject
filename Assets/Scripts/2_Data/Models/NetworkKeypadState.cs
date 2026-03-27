@@ -23,7 +23,6 @@ namespace ARVRMultiplayer.Models
         public event Action OnValidationSuccess;
         public event Action OnValidationFailure;
 
-        private readonly string _targetCode = "5203";
         private readonly int _maxDigits = 4;
 
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -44,9 +43,9 @@ namespace ARVRMultiplayer.Models
         }
 
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
-        public void ValidateRpc()
+        public void ValidateRpc(FixedString32Bytes expectedCode)
         {
-            if (CurrentInput.Value.ToString() == _targetCode)
+            if (CurrentInput.Value.Equals(expectedCode))
             {
                 NotifySuccessRpc();
             }

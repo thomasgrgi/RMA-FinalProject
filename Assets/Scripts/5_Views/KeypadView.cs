@@ -71,29 +71,34 @@ namespace ARVRMultiplayer.Views
 
         private void HandleFailure()
         {
+            Debug.Log("[KeypadView] Failure");
             StopAllCoroutines();
-            StartCoroutine(BlinkRoutine(_errorColor));
+            StartCoroutine(BlinkRoutine(_errorColor, shouldRevert: true));
         }
 
         private void HandleSuccess()
         {
+            Debug.Log("[KeypadView] Success");
             StopAllCoroutines();
-            StartCoroutine(BlinkRoutine(_successColor));
+            SetButtonsColor(_successColor);
         }
 
-        private IEnumerator BlinkRoutine(Color targetColor)
+        private IEnumerator BlinkRoutine(Color targetColor, bool shouldRevert)
         {
             // Appliquer la couleur de feedback
             SetButtonsColor(targetColor);
 
             yield return new WaitForSeconds(_blinkDuration);
 
-            // Remettre la couleur d'origine
-            for (int i = 0; i < _buttonRenderers.Length; i++)
+            // Remettre la couleur d'origine seulement en cas d'échec
+            if (shouldRevert)
             {
-                if (_buttonRenderers[i] != null)
+                for (int i = 0; i < _buttonRenderers.Length; i++)
                 {
-                    _buttonRenderers[i].material.color = _originalColors[i];
+                    if (_buttonRenderers[i] != null)
+                    {
+                        _buttonRenderers[i].material.color = _originalColors[i];
+                    }
                 }
             }
         }
