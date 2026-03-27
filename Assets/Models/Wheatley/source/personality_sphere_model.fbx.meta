@@ -3,7 +3,32 @@ guid: 83dae4e6accb9ca4f82a01500780d01c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: personality_sphere
+    second: {fileID: 2100000, guid: 015bb510cf978a748b7ee33a2653e3c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: personality_sphere_glass
+    second: {fileID: 2100000, guid: 80458945310667344a98485c56795f70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: personality_sphere_light_damaged
+    second: {fileID: 2100000, guid: 6ce7ba0382de0fb4d9371316fc331d27, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: personality_sphere
+    second: {fileID: 2800000, guid: 1fb64fbe216bf5040a92bcf4fb82f3fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: personality_sphere_light_damaged
+    second: {fileID: 2800000, guid: 7f000da7905d35841bda04e1ace33efb, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
