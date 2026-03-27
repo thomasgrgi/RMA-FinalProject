@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ARVRMultiplayer.Services;
+using UnityEngine;
 
 /// <summary>
 /// Attach to the Teleporter object (the pad / zone in the world).
@@ -38,6 +39,11 @@ public class TeleporterService : MonoBehaviour
     [Header("Visual Feedback (optional)")]
     [Tooltip("Child objects to show/hide when the pad is active.")]
     [SerializeField] private GameObject[] activeVisuals;
+    
+    // APRÈS [Header("Visual Feedback (optional)")]
+    [Header("AR Rotation")]
+    [Tooltip("Service qui applique la rotation au joueur AR après téléportation.")]
+    [SerializeField] private ARRotationService _arRotationService;
 
     // ── Private state ─────────────────────────────────────────────────────
     private bool _isActive = false;
@@ -83,6 +89,16 @@ public class TeleporterService : MonoBehaviour
         if (cc != null) cc.enabled = true;
 
         Debug.Log($"[Teleporter] Player teleported to '{destination.name}' at {destination.position}");
+        
+        if (_arRotationService != null)
+        {
+            _arRotationService.ApplyRotationToAR();
+            Debug.Log("[TeleporterService] Rotation AR déclenchée.");
+        }
+        else
+        {
+            Debug.LogWarning("[TeleporterService] _arRotationService non assigné — rotation AR ignorée.");
+        }
         StartCoroutine(TeleportCooldown());
     }
 

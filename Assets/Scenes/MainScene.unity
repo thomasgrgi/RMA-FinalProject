@@ -6945,6 +6945,78 @@ MonoBehaviour:
   _xrOrigin: {fileID: 12063256}
   _targetImageName: CenterMarker
   _virtualTarget: {fileID: 1459636540}
+--- !u!1 &1271370976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271370978}
+  - component: {fileID: 1271370977}
+  - component: {fileID: 1271370979}
+  m_Layer: 0
+  m_Name: ARRotationSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1271370977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271370976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2355115333
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!4 &1271370978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271370976}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.87039, y: 1.10113, z: 1.32699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271370979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271370976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e8e4b97ef247daa1fa73bd2efbba81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARVRMultiplayer.Services.ARRotationService
+  ShowTopMostFoldoutHeaderGroup: 1
+  _xrOrigin: {fileID: 12063252}
 --- !u!1001 &1358538526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7053,6 +7125,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 973881370}
+    - target: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: _arRotationService
+      value: 
+      objectReference: {fileID: 1271370979}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7562,7 +7638,7 @@ PrefabInstance:
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1240701478}
+      objectReference: {fileID: 1271370979}
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -7577,7 +7653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ResetCalibration
+      value: ApplyRotationToAR
       objectReference: {fileID: 0}
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7585,7 +7661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ARVRMultiplayer.Controllers.ARCalibrationController, Assembly-CSharp
+      value: ARVRMultiplayer.Services.ARRotationService, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4096662365075936410, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
       propertyPath: OnTeleporterActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -7671,6 +7747,10 @@ PrefabInstance:
       propertyPath: startActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: _arRotationService
+      value: 
+      objectReference: {fileID: 1271370979}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9536,6 +9616,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 154910464}
+    - target: {fileID: 6708394240848457016, guid: 56e90ecf3d602c7418f62e027051356e, type: 3}
+      propertyPath: _arRotationService
+      value: 
+      objectReference: {fileID: 1271370979}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11856,3 +11940,4 @@ SceneRoots:
   - {fileID: 1701688672}
   - {fileID: 625967718}
   - {fileID: 687859714}
+  - {fileID: 1271370978}
