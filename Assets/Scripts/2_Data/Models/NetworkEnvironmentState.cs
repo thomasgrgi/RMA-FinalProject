@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -9,14 +10,31 @@ namespace ARVRMultiplayer.Models
     /// </summary>
     public class NetworkEnvironmentState : NetworkBehaviour
     {
-        // Faux = État normal (par défaut), Vrai = État alternatif (lumières éteintes, etc.)
         public NetworkVariable<bool> IsAlternateMode = new NetworkVariable<bool>(
             false,
             NetworkVariableReadPermission.Everyone,
             NetworkVariableWritePermission.Server
         );
 
-        // N'importe quel joueur peut demander au serveur de basculer l'état
+        // Événement statique global pour que tous les avatars puissent s'y abonner sans FindObjectOfType
+        public static event Action<bool> OnAlternateModeChanged;
+
+        public override void OnNetworkSpawn()
+        {
+            IsAlternateMode.OnValueChanged += (oldVal, newVal) => OnAlternateModeChanged?.Invoke(newVal);
+            
+            // Appliquer l'état initial pour ceux qui rejoignent la partie en retard
+            if (IsClient)
+            {
+                OnAlternateModeChanged?.Invoke(IsAlternateMode.Value);
+            }
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            IsAlternateMode.OnValueChanged -= (oldVal, newVal) => OnAlternateModeChanged?.Invoke(newVal);
+        }
+
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
         public void RequestToggleEnvironmentRpc()
         {
