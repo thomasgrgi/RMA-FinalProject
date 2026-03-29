@@ -112,7 +112,7 @@ namespace ARVRMultiplayer.Controllers
             // C'est ici que vous placerez la logique d'ouverture de porte,
             // de coffre-fort, ou de fin de jeu plus tard !
             // =========================================================
-            Debug.Log("🎉 [Keypad] LE CODE EST CORRECT ! Action réussie !");
+            Debug.Log("[Keypad] LE CODE EST CORRECT ! Action réussie !");
         }
     }
 }

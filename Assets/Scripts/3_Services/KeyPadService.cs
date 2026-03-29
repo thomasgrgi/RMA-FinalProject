@@ -80,7 +80,7 @@ namespace ARVRMultiplayer.Controllers
             if (!CanPress()) return;
 
             string entered = _localInput.ToString();
-            Debug.Log($"[Keypad] OK. Saisie : '{entered}' — attendu : '{SecretCode}'");
+            Debug.Log($"[Keypad] OK. Saisie : '{entered}'");
 
             // Tell the network regardless, so the display stays in sync.
             _state.ValidateRpc(new Unity.Collections.FixedString32Bytes(SecretCode));
